@@ -13,6 +13,9 @@
 		B8ACF0AF1DBC118D00F6ADD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8ACF0AD1DBC118D00F6ADD7 /* Main.storyboard */; };
 		B8ACF0BA1DBC118D00F6ADD7 /* Hello_WorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ACF0B91DBC118D00F6ADD7 /* Hello_WorldTests.swift */; };
 		B8ACF0C51DBC118D00F6ADD7 /* Hello_WorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ACF0C41DBC118D00F6ADD7 /* Hello_WorldUITests.swift */; };
+		B8ACF0DB1DBC1BB200F6ADD7 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ACF0DA1DBC1BB200F6ADD7 /* FinderSync.swift */; };
+		B8ACF0DF1DBC1BB200F6ADD7 /* OpenTermFinderExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B8ACF0D61DBC1BB200F6ADD7 /* OpenTermFinderExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B8ACF0E51DBC69CC00F6ADD7 /* terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = B8ACF0E41DBC69CB00F6ADD7 /* terminal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,21 +33,47 @@
 			remoteGlobalIDString = B8ACF0A31DBC118D00F6ADD7;
 			remoteInfo = "Hello World";
 		};
+		B8ACF0DD1DBC1BB200F6ADD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8ACF09C1DBC118D00F6ADD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8ACF0D51DBC1BB200F6ADD7;
+			remoteInfo = OpenTermFinderExtension;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B8ACF0E31DBC1BB200F6ADD7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B8ACF0DF1DBC1BB200F6ADD7 /* OpenTermFinderExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		B8ACF0A41DBC118D00F6ADD7 /* Hello World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8ACF0A41DBC118D00F6ADD7 /* OpenTerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8ACF0A71DBC118D00F6ADD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8ACF0A91DBC118D00F6ADD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B8ACF0AB1DBC118D00F6ADD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8ACF0AE1DBC118D00F6ADD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8ACF0B01DBC118D00F6ADD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8ACF0B51DBC118D00F6ADD7 /* Hello WorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hello WorldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8ACF0B51DBC118D00F6ADD7 /* OpenTermTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTermTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8ACF0B91DBC118D00F6ADD7 /* Hello_WorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello_WorldTests.swift; sourceTree = "<group>"; };
 		B8ACF0BB1DBC118D00F6ADD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8ACF0C01DBC118D00F6ADD7 /* Hello WorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hello WorldUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8ACF0C01DBC118D00F6ADD7 /* OpenTermUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTermUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8ACF0C41DBC118D00F6ADD7 /* Hello_WorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello_WorldUITests.swift; sourceTree = "<group>"; };
 		B8ACF0C61DBC118D00F6ADD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8ACF0D61DBC1BB200F6ADD7 /* OpenTermFinderExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OpenTermFinderExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8ACF0D91DBC1BB200F6ADD7 /* OpenTermFinderExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenTermFinderExtension.entitlements; sourceTree = "<group>"; };
+		B8ACF0DA1DBC1BB200F6ADD7 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		B8ACF0DC1DBC1BB200F6ADD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8ACF0E41DBC69CB00F6ADD7 /* terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = terminal.png; path = Images/terminal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,13 +98,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B8ACF0D31DBC1BB200F6ADD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		B8ACF09B1DBC118D00F6ADD7 = {
 			isa = PBXGroup;
 			children = (
-				B8ACF0A61DBC118D00F6ADD7 /* Hello World */,
+				B8ACF0A61DBC118D00F6ADD7 /* OpenTerm */,
+				B8ACF0D71DBC1BB200F6ADD7 /* OpenTermFinderExtension */,
 				B8ACF0B81DBC118D00F6ADD7 /* Hello WorldTests */,
 				B8ACF0C31DBC118D00F6ADD7 /* Hello WorldUITests */,
 				B8ACF0A51DBC118D00F6ADD7 /* Products */,
@@ -85,14 +122,15 @@
 		B8ACF0A51DBC118D00F6ADD7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B8ACF0A41DBC118D00F6ADD7 /* Hello World.app */,
-				B8ACF0B51DBC118D00F6ADD7 /* Hello WorldTests.xctest */,
-				B8ACF0C01DBC118D00F6ADD7 /* Hello WorldUITests.xctest */,
+				B8ACF0A41DBC118D00F6ADD7 /* OpenTerm.app */,
+				B8ACF0B51DBC118D00F6ADD7 /* OpenTermTests.xctest */,
+				B8ACF0C01DBC118D00F6ADD7 /* OpenTermUITests.xctest */,
+				B8ACF0D61DBC1BB200F6ADD7 /* OpenTermFinderExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B8ACF0A61DBC118D00F6ADD7 /* Hello World */ = {
+		B8ACF0A61DBC118D00F6ADD7 /* OpenTerm */ = {
 			isa = PBXGroup;
 			children = (
 				B8ACF0A71DBC118D00F6ADD7 /* AppDelegate.swift */,
@@ -101,7 +139,7 @@
 				B8ACF0AD1DBC118D00F6ADD7 /* Main.storyboard */,
 				B8ACF0B01DBC118D00F6ADD7 /* Info.plist */,
 			);
-			path = "Hello World";
+			path = OpenTerm;
 			sourceTree = "<group>";
 		};
 		B8ACF0B81DBC118D00F6ADD7 /* Hello WorldTests */ = {
@@ -122,29 +160,50 @@
 			path = "Hello WorldUITests";
 			sourceTree = "<group>";
 		};
+		B8ACF0D71DBC1BB200F6ADD7 /* OpenTermFinderExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B8ACF0E41DBC69CB00F6ADD7 /* terminal.png */,
+				B8ACF0DA1DBC1BB200F6ADD7 /* FinderSync.swift */,
+				B8ACF0DC1DBC1BB200F6ADD7 /* Info.plist */,
+				B8ACF0D81DBC1BB200F6ADD7 /* Supporting Files */,
+			);
+			path = OpenTermFinderExtension;
+			sourceTree = "<group>";
+		};
+		B8ACF0D81DBC1BB200F6ADD7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8ACF0D91DBC1BB200F6ADD7 /* OpenTermFinderExtension.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B8ACF0A31DBC118D00F6ADD7 /* Hello World */ = {
+		B8ACF0A31DBC118D00F6ADD7 /* OpenTerm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B8ACF0C91DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "Hello World" */;
+			buildConfigurationList = B8ACF0C91DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "OpenTerm" */;
 			buildPhases = (
 				B8ACF0A01DBC118D00F6ADD7 /* Sources */,
 				B8ACF0A11DBC118D00F6ADD7 /* Frameworks */,
 				B8ACF0A21DBC118D00F6ADD7 /* Resources */,
+				B8ACF0E31DBC1BB200F6ADD7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B8ACF0DE1DBC1BB200F6ADD7 /* PBXTargetDependency */,
 			);
-			name = "Hello World";
+			name = OpenTerm;
 			productName = "Hello World";
-			productReference = B8ACF0A41DBC118D00F6ADD7 /* Hello World.app */;
+			productReference = B8ACF0A41DBC118D00F6ADD7 /* OpenTerm.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B8ACF0B41DBC118D00F6ADD7 /* Hello WorldTests */ = {
+		B8ACF0B41DBC118D00F6ADD7 /* OpenTermTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B8ACF0CC1DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "Hello WorldTests" */;
+			buildConfigurationList = B8ACF0CC1DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "OpenTermTests" */;
 			buildPhases = (
 				B8ACF0B11DBC118D00F6ADD7 /* Sources */,
 				B8ACF0B21DBC118D00F6ADD7 /* Frameworks */,
@@ -155,14 +214,14 @@
 			dependencies = (
 				B8ACF0B71DBC118D00F6ADD7 /* PBXTargetDependency */,
 			);
-			name = "Hello WorldTests";
+			name = OpenTermTests;
 			productName = "Hello WorldTests";
-			productReference = B8ACF0B51DBC118D00F6ADD7 /* Hello WorldTests.xctest */;
+			productReference = B8ACF0B51DBC118D00F6ADD7 /* OpenTermTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B8ACF0BF1DBC118D00F6ADD7 /* Hello WorldUITests */ = {
+		B8ACF0BF1DBC118D00F6ADD7 /* OpenTermUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B8ACF0CF1DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "Hello WorldUITests" */;
+			buildConfigurationList = B8ACF0CF1DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "OpenTermUITests" */;
 			buildPhases = (
 				B8ACF0BC1DBC118D00F6ADD7 /* Sources */,
 				B8ACF0BD1DBC118D00F6ADD7 /* Frameworks */,
@@ -173,10 +232,27 @@
 			dependencies = (
 				B8ACF0C21DBC118D00F6ADD7 /* PBXTargetDependency */,
 			);
-			name = "Hello WorldUITests";
+			name = OpenTermUITests;
 			productName = "Hello WorldUITests";
-			productReference = B8ACF0C01DBC118D00F6ADD7 /* Hello WorldUITests.xctest */;
+			productReference = B8ACF0C01DBC118D00F6ADD7 /* OpenTermUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B8ACF0D51DBC1BB200F6ADD7 /* OpenTermFinderExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8ACF0E01DBC1BB200F6ADD7 /* Build configuration list for PBXNativeTarget "OpenTermFinderExtension" */;
+			buildPhases = (
+				B8ACF0D21DBC1BB200F6ADD7 /* Sources */,
+				B8ACF0D31DBC1BB200F6ADD7 /* Frameworks */,
+				B8ACF0D41DBC1BB200F6ADD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenTermFinderExtension;
+			productName = OpenTermFinderExtension;
+			productReference = B8ACF0D61DBC1BB200F6ADD7 /* OpenTermFinderExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -190,6 +266,7 @@
 				TargetAttributes = {
 					B8ACF0A31DBC118D00F6ADD7 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = X7V4DVRAE2;
 						ProvisioningStyle = Automatic;
 					};
 					B8ACF0B41DBC118D00F6ADD7 = {
@@ -202,9 +279,14 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = B8ACF0A31DBC118D00F6ADD7;
 					};
+					B8ACF0D51DBC1BB200F6ADD7 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = X7V4DVRAE2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
-			buildConfigurationList = B8ACF09F1DBC118D00F6ADD7 /* Build configuration list for PBXProject "Hello World" */;
+			buildConfigurationList = B8ACF09F1DBC118D00F6ADD7 /* Build configuration list for PBXProject "OpenTerm" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -217,9 +299,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B8ACF0A31DBC118D00F6ADD7 /* Hello World */,
-				B8ACF0B41DBC118D00F6ADD7 /* Hello WorldTests */,
-				B8ACF0BF1DBC118D00F6ADD7 /* Hello WorldUITests */,
+				B8ACF0A31DBC118D00F6ADD7 /* OpenTerm */,
+				B8ACF0B41DBC118D00F6ADD7 /* OpenTermTests */,
+				B8ACF0BF1DBC118D00F6ADD7 /* OpenTermUITests */,
+				B8ACF0D51DBC1BB200F6ADD7 /* OpenTermFinderExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +328,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8ACF0D41DBC1BB200F6ADD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8ACF0E51DBC69CC00F6ADD7 /* terminal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,18 +367,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B8ACF0D21DBC1BB200F6ADD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8ACF0DB1DBC1BB200F6ADD7 /* FinderSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		B8ACF0B71DBC118D00F6ADD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B8ACF0A31DBC118D00F6ADD7 /* Hello World */;
+			target = B8ACF0A31DBC118D00F6ADD7 /* OpenTerm */;
 			targetProxy = B8ACF0B61DBC118D00F6ADD7 /* PBXContainerItemProxy */;
 		};
 		B8ACF0C21DBC118D00F6ADD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B8ACF0A31DBC118D00F6ADD7 /* Hello World */;
+			target = B8ACF0A31DBC118D00F6ADD7 /* OpenTerm */;
 			targetProxy = B8ACF0C11DBC118D00F6ADD7 /* PBXContainerItemProxy */;
+		};
+		B8ACF0DE1DBC1BB200F6ADD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8ACF0D51DBC1BB200F6ADD7 /* OpenTermFinderExtension */;
+			targetProxy = B8ACF0DD1DBC1BB200F6ADD7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -396,11 +500,14 @@
 		B8ACF0CA1DBC118D00F6ADD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Hello World/Info.plist";
+				DEVELOPMENT_TEAM = X7V4DVRAE2;
+				INFOPLIST_FILE = OpenTerm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kpmoran.Hello-World";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kpmoran.OpenTerm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -409,11 +516,14 @@
 		B8ACF0CB1DBC118D00F6ADD7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Hello World/Info.plist";
+				DEVELOPMENT_TEAM = X7V4DVRAE2;
+				INFOPLIST_FILE = OpenTerm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kpmoran.Hello-World";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kpmoran.OpenTerm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -430,7 +540,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kpmoran.Hello-WorldTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hello World.app/Contents/MacOS/Hello World";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenTerm.app/Contents/MacOS/OpenTerm";
 			};
 			name = Debug;
 		};
@@ -445,7 +555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kpmoran.Hello-WorldTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hello World.app/Contents/MacOS/Hello World";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenTerm.app/Contents/MacOS/OpenTerm";
 			};
 			name = Release;
 		};
@@ -477,10 +587,42 @@
 			};
 			name = Release;
 		};
+		B8ACF0E11DBC1BB200F6ADD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OpenTermFinderExtension/OpenTermFinderExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X7V4DVRAE2;
+				INFOPLIST_FILE = OpenTermFinderExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kpmoran.OpenTerm.OpenTermFinderExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B8ACF0E21DBC1BB200F6ADD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OpenTermFinderExtension/OpenTermFinderExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X7V4DVRAE2;
+				INFOPLIST_FILE = OpenTermFinderExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kpmoran.OpenTerm.OpenTermFinderExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B8ACF09F1DBC118D00F6ADD7 /* Build configuration list for PBXProject "Hello World" */ = {
+		B8ACF09F1DBC118D00F6ADD7 /* Build configuration list for PBXProject "OpenTerm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8ACF0C71DBC118D00F6ADD7 /* Debug */,
@@ -489,29 +631,41 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B8ACF0C91DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "Hello World" */ = {
+		B8ACF0C91DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "OpenTerm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8ACF0CA1DBC118D00F6ADD7 /* Debug */,
 				B8ACF0CB1DBC118D00F6ADD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		B8ACF0CC1DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "Hello WorldTests" */ = {
+		B8ACF0CC1DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "OpenTermTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8ACF0CD1DBC118D00F6ADD7 /* Debug */,
 				B8ACF0CE1DBC118D00F6ADD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		B8ACF0CF1DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "Hello WorldUITests" */ = {
+		B8ACF0CF1DBC118D00F6ADD7 /* Build configuration list for PBXNativeTarget "OpenTermUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8ACF0D01DBC118D00F6ADD7 /* Debug */,
 				B8ACF0D11DBC118D00F6ADD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8ACF0E01DBC1BB200F6ADD7 /* Build configuration list for PBXNativeTarget "OpenTermFinderExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8ACF0E11DBC1BB200F6ADD7 /* Debug */,
+				B8ACF0E21DBC1BB200F6ADD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

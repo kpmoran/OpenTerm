@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>OpenTermFinderExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>B8ACF0BF1DBC118D00F6ADD7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B8ACF0D51DBC1BB200F6ADD7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
