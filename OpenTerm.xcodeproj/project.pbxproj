@@ -11,8 +11,7 @@
 		B8ACF0AA1DBC118D00F6ADD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ACF0A91DBC118D00F6ADD7 /* ViewController.swift */; };
 		B8ACF0AC1DBC118D00F6ADD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8ACF0AB1DBC118D00F6ADD7 /* Assets.xcassets */; };
 		B8ACF0AF1DBC118D00F6ADD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8ACF0AD1DBC118D00F6ADD7 /* Main.storyboard */; };
-		B8ACF0BA1DBC118D00F6ADD7 /* Hello_WorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ACF0B91DBC118D00F6ADD7 /* Hello_WorldTests.swift */; };
-		B8ACF0C51DBC118D00F6ADD7 /* Hello_WorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ACF0C41DBC118D00F6ADD7 /* Hello_WorldUITests.swift */; };
+		B8ACF0BA1DBC118D00F6ADD7 /* OpenTermTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ACF0B91DBC118D00F6ADD7 /* OpenTermTests.swift */; };
 		B8ACF0DB1DBC1BB200F6ADD7 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ACF0DA1DBC1BB200F6ADD7 /* FinderSync.swift */; };
 		B8ACF0DF1DBC1BB200F6ADD7 /* OpenTermFinderExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B8ACF0D61DBC1BB200F6ADD7 /* OpenTermFinderExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B8ACF0E51DBC69CC00F6ADD7 /* terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = B8ACF0E41DBC69CB00F6ADD7 /* terminal.png */; };
@@ -64,11 +63,9 @@
 		B8ACF0AE1DBC118D00F6ADD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8ACF0B01DBC118D00F6ADD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8ACF0B51DBC118D00F6ADD7 /* OpenTermTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTermTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8ACF0B91DBC118D00F6ADD7 /* Hello_WorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello_WorldTests.swift; sourceTree = "<group>"; };
-		B8ACF0BB1DBC118D00F6ADD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8ACF0B91DBC118D00F6ADD7 /* OpenTermTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OpenTermTests.swift; path = "OpenTem Tests/OpenTermTests.swift"; sourceTree = "<group>"; };
+		B8ACF0BB1DBC118D00F6ADD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "OpenTem Tests/Info.plist"; sourceTree = "<group>"; };
 		B8ACF0C01DBC118D00F6ADD7 /* OpenTermUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTermUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8ACF0C41DBC118D00F6ADD7 /* Hello_WorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello_WorldUITests.swift; sourceTree = "<group>"; };
-		B8ACF0C61DBC118D00F6ADD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8ACF0D61DBC1BB200F6ADD7 /* OpenTermFinderExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OpenTermFinderExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8ACF0D91DBC1BB200F6ADD7 /* OpenTermFinderExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenTermFinderExtension.entitlements; sourceTree = "<group>"; };
 		B8ACF0DA1DBC1BB200F6ADD7 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
@@ -114,7 +111,6 @@
 				B8ACF0A61DBC118D00F6ADD7 /* OpenTerm */,
 				B8ACF0D71DBC1BB200F6ADD7 /* OpenTermFinderExtension */,
 				B8ACF0B81DBC118D00F6ADD7 /* Hello WorldTests */,
-				B8ACF0C31DBC118D00F6ADD7 /* Hello WorldUITests */,
 				B8ACF0A51DBC118D00F6ADD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -145,19 +141,10 @@
 		B8ACF0B81DBC118D00F6ADD7 /* Hello WorldTests */ = {
 			isa = PBXGroup;
 			children = (
-				B8ACF0B91DBC118D00F6ADD7 /* Hello_WorldTests.swift */,
+				B8ACF0B91DBC118D00F6ADD7 /* OpenTermTests.swift */,
 				B8ACF0BB1DBC118D00F6ADD7 /* Info.plist */,
 			);
 			path = "Hello WorldTests";
-			sourceTree = "<group>";
-		};
-		B8ACF0C31DBC118D00F6ADD7 /* Hello WorldUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B8ACF0C41DBC118D00F6ADD7 /* Hello_WorldUITests.swift */,
-				B8ACF0C61DBC118D00F6ADD7 /* Info.plist */,
-			);
-			path = "Hello WorldUITests";
 			sourceTree = "<group>";
 		};
 		B8ACF0D71DBC1BB200F6ADD7 /* OpenTermFinderExtension */ = {
@@ -355,7 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8ACF0BA1DBC118D00F6ADD7 /* Hello_WorldTests.swift in Sources */,
+				B8ACF0BA1DBC118D00F6ADD7 /* OpenTermTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +350,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8ACF0C51DBC118D00F6ADD7 /* Hello_WorldUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
