@@ -21,7 +21,6 @@ class FinderSync: FIFinderSync {
         // Set up the directory we are syncing.
         FIFinderSyncController.default().directoryURLs = [self.myFolderURL]
         
-        // Set up images for our badge identifiers. For demonstration purposes, this uses off-the-shelf images.
     }
     
     // MARK: - Menu and toolbar item support
@@ -31,7 +30,7 @@ class FinderSync: FIFinderSync {
     }
     
     override var toolbarItemToolTip: String {
-        return "FinderSy: Click the toolbar item for a menu."
+        return "Click Here to use OpenTerm to open a Terminal in current Finder directory."
     }
     
     override var toolbarItemImage: NSImage {

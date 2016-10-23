@@ -15,6 +15,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        let task = Process()
+        task.launchPath = "/bin/bash"
+        task.arguments = ["-c", "pluginkit -e use -i com.kpmoran.OpenTerm.OpenTermFinderExtension ; killall Finder"]
+        task.launch()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
