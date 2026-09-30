@@ -30,21 +30,29 @@ class FinderSync: FIFinderSync {
     }
     
     override var toolbarItemToolTip: String {
-        return "Click Here to use OpenTerm to open a Terminal in current Finder directory."
+        return "Open a Terminal window in the current Finder folder."
     }
     
     override var toolbarItemImage: NSImage {
-        return NSImage(named: "terminal.png")!
+        // terminal.png is high resolution; draw it at Finder's toolbar icon size.
+        let image = NSImage(named: "terminal.png")!.copy() as! NSImage
+        image.size = NSSize(width: 16, height: 16)
+        return image
     }
     
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
-        // Produce a menu for the extension.
+        // Clicking the toolbar button opens Terminal immediately instead of showing a menu.
+        if menuKind == .toolbarItemMenu {
+            openTerminal(nil)
+            return NSMenu()
+        }
+        
         let menu = NSMenu(title: "Open Terminal Here")
-        menu.addItem(withTitle: "Open Terminal Here", action: #selector(sampleAction(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Open Terminal Here", action: #selector(openTerminal(_:)), keyEquivalent: "")
         return menu
     }
     
-    @IBAction func sampleAction(_ sender: AnyObject?) {
+    @IBAction func openTerminal(_ sender: AnyObject?) {
         guard let target = FIFinderSyncController.default().targetedURL(),
               let terminalURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: OpenTermIdentifiers.terminal) else {
             return
