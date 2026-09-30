@@ -34,10 +34,8 @@ class FinderSync: FIFinderSync {
     }
     
     override var toolbarItemImage: NSImage {
-        // terminal.png is high resolution; draw it at Finder's toolbar icon size.
-        let image = NSImage(named: "terminal.png")!.copy() as! NSImage
-        image.size = NSSize(width: 16, height: 16)
-        return image
+        // Bundled at toolbar size (16pt, with an @2x version for Retina displays).
+        return NSImage(named: "terminal")!
     }
     
     override func menu(for menuKind: FIMenuKind) -> NSMenu {

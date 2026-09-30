@@ -42,8 +42,13 @@ class BundleStructureTests: XCTestCase {
         XCTAssertEqual(attributes["NSExtensionPrincipalClass"] as? String, "OpenTermFinderExtension.FinderSync")
     }
 
-    func testToolbarImageIsBundledInExtension() {
-        XCTAssertNotNil(extensionBundle.image(forResource: "terminal"))
+    func testToolbarImageIsBundledAtToolbarSize() throws {
+        // Finder draws the toolbar image at the size of its bitmaps, so they must be toolbar sized.
+        let image = try XCTUnwrap(extensionBundle.image(forResource: "terminal"))
+        let bitmapSizes = image.representations.map { NSSize(width: $0.pixelsWide, height: $0.pixelsHigh) }
+        XCTAssertEqual(image.size, NSSize(width: 16, height: 16))
+        XCTAssertTrue(bitmapSizes.contains(NSSize(width: 32, height: 32)), "Missing @2x bitmap, found \(bitmapSizes)")
+        XCTAssertTrue(bitmapSizes.allSatisfy { $0.width <= 32 }, "Oversized bitmap, found \(bitmapSizes)")
     }
 
     func testExecutablesAreNativeForThisMachine() throws {
