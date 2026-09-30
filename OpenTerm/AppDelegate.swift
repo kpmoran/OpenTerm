@@ -8,7 +8,7 @@
 
 import Cocoa
 
-@NSApplicationMain
+@main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
 
@@ -16,9 +16,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         let task = Process()
-        task.launchPath = "/bin/bash"
-        task.arguments = ["-c", "pluginkit -e use -i com.kpmoran.OpenTerm.OpenTermFinderExtension ; killall Finder"]
-        task.launch()
+        task.executableURL = URL(fileURLWithPath: "/bin/bash")
+        task.arguments = ["-c", "pluginkit -e use -i \(OpenTermIdentifiers.finderExtension) ; killall Finder"]
+        try? task.run()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-latest
+    env:
+      # CI has no signing certificates, so sign ad hoc.
+      SIGNING: CODE_SIGN_IDENTITY=- CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM=
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Run tests
+        run: |
+          xcodebuild test \
+            -project OpenTerm.xcodeproj \
+            -scheme OpenTerm \
+            -destination 'platform=macOS' \
+            $SIGNING
+
+      - name: Build Release
+        run: |
+          xcodebuild build \
+            -project OpenTerm.xcodeproj \
+            -scheme OpenTerm \
+            -configuration Release \
+            -destination 'generic/platform=macOS' \
+            -derivedDataPath build \
+            $SIGNING
+
+      - name: Verify universal binaries
+        run: |
+          app=build/Build/Products/Release/OpenTerm.app
+          for binary in \
+            "$app/Contents/MacOS/OpenTerm" \
+            "$app/Contents/PlugIns/OpenTermFinderExtension.appex/Contents/MacOS/OpenTermFinderExtension"; do
+            archs=$(lipo -archs "$binary")
+            echo "$binary: $archs"
+            [[ " $archs " == *" arm64 "* && " $archs " == *" x86_64 "* ]] || { echo "::error::$binary is not universal"; exit 1; }
+          done

@@ -34,7 +34,7 @@ class FinderSync: FIFinderSync {
     }
     
     override var toolbarItemImage: NSImage {
-        return NSImage(named:"terminal.png")!
+        return NSImage(named: "terminal.png")!
     }
     
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
@@ -45,13 +45,11 @@ class FinderSync: FIFinderSync {
     }
     
     @IBAction func sampleAction(_ sender: AnyObject?) {
-        let target = FIFinderSyncController.default().targetedURL()
-        let task = Process()
-        task.launchPath = "/bin/bash"
-        if let targetPath = target?.path {
-            task.arguments = ["-c", "open -a Terminal "+targetPath]
-            task.launch()
+        guard let target = FIFinderSyncController.default().targetedURL(),
+              let terminalURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: OpenTermIdentifiers.terminal) else {
+            return
         }
+        NSWorkspace.shared.open([target], withApplicationAt: terminalURL, configuration: NSWorkspace.OpenConfiguration())
     }
 }
 
