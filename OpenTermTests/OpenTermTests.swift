@@ -10,7 +10,7 @@ import Cocoa
 import XCTest
 
 // These tests inspect the built OpenTerm.app rather than launching it, since
-// launching the app restarts Finder.
+// launching the app controls Finder and opens a Terminal window.
 class BundleStructureTests: XCTestCase {
 
     var appBundle: Bundle!
@@ -42,13 +42,14 @@ class BundleStructureTests: XCTestCase {
         XCTAssertEqual(attributes["NSExtensionPrincipalClass"] as? String, "OpenTermFinderExtension.FinderSync")
     }
 
-    func testToolbarImageIsBundledAtToolbarSize() throws {
-        // Finder draws the toolbar image at the size of its bitmaps, so they must be toolbar sized.
-        let image = try XCTUnwrap(extensionBundle.image(forResource: "terminal"))
-        let bitmapSizes = image.representations.map { NSSize(width: $0.pixelsWide, height: $0.pixelsHigh) }
-        XCTAssertEqual(image.size, NSSize(width: 16, height: 16))
-        XCTAssertTrue(bitmapSizes.contains(NSSize(width: 32, height: 32)), "Missing @2x bitmap, found \(bitmapSizes)")
-        XCTAssertTrue(bitmapSizes.allSatisfy { $0.width <= 32 }, "Oversized bitmap, found \(bitmapSizes)")
+    func testAppRunsInBackgroundSoToolbarClicksDoNotFlashTheDock() {
+        XCTAssertEqual(appBundle.object(forInfoDictionaryKey: "LSUIElement") as? Bool, true)
+    }
+
+    func testAppExplainsWhyItControlsFinder() throws {
+        // Without this, macOS refuses to let the app ask Finder for its front window.
+        let reason = try XCTUnwrap(appBundle.object(forInfoDictionaryKey: "NSAppleEventsUsageDescription") as? String)
+        XCTAssertFalse(reason.isEmpty)
     }
 
     func testExecutablesAreNativeForThisMachine() throws {

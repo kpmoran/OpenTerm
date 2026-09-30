@@ -23,28 +23,11 @@ class FinderSync: FIFinderSync {
         
     }
     
-    // MARK: - Menu and toolbar item support
+    // MARK: - Menu support
     
-    override var toolbarItemName: String {
-        return "OpenTerm"
-    }
-    
-    override var toolbarItemToolTip: String {
-        return "Open a Terminal window in the current Finder folder."
-    }
-    
-    override var toolbarItemImage: NSImage {
-        // Bundled at toolbar size (16pt, with an @2x version for Retina displays).
-        return NSImage(named: "terminal")!
-    }
-    
+    // The toolbar button is the OpenTerm app itself (see AppDelegate), so the
+    // extension only provides the right-click menu.
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
-        // Clicking the toolbar button opens Terminal immediately instead of showing a menu.
-        if menuKind == .toolbarItemMenu {
-            openTerminal(nil)
-            return NSMenu()
-        }
-        
         let menu = NSMenu(title: "Open Terminal Here")
         menu.addItem(withTitle: "Open Terminal Here", action: #selector(openTerminal(_:)), keyEquivalent: "")
         return menu
