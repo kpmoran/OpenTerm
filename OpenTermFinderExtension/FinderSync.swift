@@ -26,7 +26,7 @@ class FinderSync: FIFinderSync {
     // MARK: - Menu and toolbar item support
     
     override var toolbarItemName: String {
-        return "FinderSy"
+        return "OpenTerm"
     }
     
     override var toolbarItemToolTip: String {
